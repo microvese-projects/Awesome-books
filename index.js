@@ -19,4 +19,4 @@ setInterval(() => {
   const date = DateTime.now();
   const dateObj = date.toLocaleString(DateTime.DATETIME_MED);
   document.querySelector('#date').textContent = dateObj;
-}, 1000);
+}, 60000);
