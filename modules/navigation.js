@@ -1,6 +1,6 @@
-export const sections = document.querySelectorAll('section');
 export const bookListSection = document.querySelector('#book-list-section');
 export const navBtns = document.querySelectorAll('.nav-btn');
+const sections = document.querySelectorAll('section');
 
 export function renderPage(e) {
   sections.forEach((section) => {
