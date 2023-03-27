@@ -30,14 +30,12 @@ export default class BookList {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
       const li = document.createElement('div');
-      const capitalize = (name) => {
-        return name.split('').map((each, index) => {
-          if (index === 0) {
-            return each.toUpperCase();
-          }
-          return each;
-        }).join('');
-      }
+      const capitalize = (name) => name.split('').map((each, index) => {
+        if (index === 0) {
+          return each.toUpperCase();
+        }
+        return each;
+      }).join('');
       li.className = 'book';
 
       const title = capitalize(book.title);

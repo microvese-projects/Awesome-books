@@ -14,4 +14,4 @@ export const renderPage = (e) => {
   const section = document.querySelector(`#${idOfClicked}`);
   section.style.display = 'flex';
   btn.classList.toggle('btn-active');
-}
+};
