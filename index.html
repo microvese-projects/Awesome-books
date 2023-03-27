@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+
+  <!-- scripts and modules -->
+  <script src="./modules/navigation.js" type="module"></script>
+  <script src="/modules/booklist.js" type="module"></script>
+  <script src="./index.js" type="module"></script>
+  <title>Awesome Books</title>
+</head>
+<body>
+  <header>
+    <nav>Awesome book
+        <ul id="navbar">
+            <li class="nav-btn" data-id="book-list-section">Book-list</li> 
+            <li class="nav-btn" data-id="form">Add new</a></li> 
+            <li class="nav-btn" data-id="Contact">Contact</li> 
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="date">
+        <!-- date added through js -->
+    </div>
+    <section id="book-list-section">
+        <h1 id="list-title">Awesome Books List</h1> 
+        <div id="book-list">
+        <!--Booklist added in javascript  -->
+        </div>
+    </section>
+    <section id="form">
+        <form id="book-form">
+            <h2 id="form-title">Add new book</h2>
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <button type="submit">Add</button>
+        </form>
+    </section>
+
+    <section id="Contact">
+        <h3>Contact Information</h3>
+        <div>
+            <p>If you have Queries or suggestion reach support at:</p>
+            <ul>
+                <li>
+                  <h5>Email</h5>
+                  <a href="mailto:njugunab655@gmail.com">support@awesomebook.com</a>
+                </li>
+                <li>
+                  <h5>Telephone</h5>
+                  <span>+(053)-221-4239</span>
+                </li>
+                <li>
+                  <h5>Address</h5>
+                  <address>New Human Colony, Mars</address>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>Copyright@2023</footer>
+</body>
+</html>
