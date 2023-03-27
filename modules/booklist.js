@@ -1,18 +1,20 @@
-export class BookList {
+export default class BookList {
   constructor() {
     this.form = document.querySelector('#book-form');
     this.bookListContainer = document.querySelector('#book-list');
     this.books = [];
+    this.empty = {};
     this.loadBooksFromLocalStorage();
     this.displayBooks();
   }
 
   book(title, author) {
-    const obj = {
-      title, 
+    let obj = this.empty;
+    obj = {
+      title,
       author,
-    }
-    return obj
+    };
+    return obj;
   }
 
   loadBooksFromLocalStorage() {
@@ -23,7 +25,7 @@ export class BookList {
       localStorage.setItem('books', JSON.stringify(this.books));
     }
   }
-  
+
   displayBooks() {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
@@ -37,10 +39,10 @@ export class BookList {
         }).join('');
       }
       li.className = 'book';
-      
+
       const title = capitalize(book.title);
       const author = capitalize(book.author);
-      
+
       li.innerHTML = `"${title}" by ${author}`;
       const removeBtn = document.createElement('button');
       removeBtn.className = 'remove';
@@ -51,13 +53,13 @@ export class BookList {
     });
     this.form.reset();
   }
-  
+
   addBook(event) {
     event.preventDefault();
     const title = event.target[0].value;
     const author = event.target[1].value;
     const newBook = this.book(title, author);
-    this.books = [...this.books, newBook]
+    this.books = [...this.books, newBook];
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }

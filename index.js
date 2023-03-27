@@ -1,7 +1,7 @@
-import { BookList } from "./modules/booklist.js";
-import { navBtns, bookListSection, renderPage } from "./modules/navigation.js";
+import BookList from './modules/booklist.js';
+import { navBtns, bookListSection, renderPage } from './modules/navigation.js';
 
-const myBookList = new BookList;
+const myBookList = new BookList();
 myBookList.setupEventListeners();
 
 navBtns.forEach((each) => {
