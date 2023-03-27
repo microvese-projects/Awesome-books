@@ -20,6 +20,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
+- [Future Features](#future-features)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -87,6 +88,14 @@ Open Index.html in your browser.
 ### Run tests
 
 To run tests, interact with the website on your browser.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Features -->
+
+### Future Features <a name="future-features"></a>
+I would like to implement the following feature in the future -
+- **[Contact_form]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
