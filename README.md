@@ -143,5 +143,5 @@ I would like to thank Microverse and my coding partners for this collaboration.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/AbhishekkM05/Awesome-Books/blob/c7aede6c07c234c75711fa6e3337cc1f91ba4b7a/MIT.md) licensed.
+This project is [MIT](https://github.com/microvese-projects/Awesome-books/blob/f672b0942b32778ae7a9bd84ce1859673e4e083a/LICENSE) licensed.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
