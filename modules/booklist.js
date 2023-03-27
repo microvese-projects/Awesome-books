@@ -8,7 +8,7 @@ export default class BookList {
     this.displayBooks();
   }
 
-  book(title, author) {
+  book = (title, author) => {
     let obj = this.empty;
     obj = {
       title,
@@ -17,7 +17,7 @@ export default class BookList {
     return obj;
   }
 
-  loadBooksFromLocalStorage() {
+  loadBooksFromLocalStorage = () => {
     const storedBooks = localStorage.getItem('books');
     if (storedBooks) {
       this.books = JSON.parse(storedBooks);
@@ -26,11 +26,11 @@ export default class BookList {
     }
   }
 
-  displayBooks() {
+  displayBooks = () => {
     this.bookListContainer.innerHTML = '';
     this.books.forEach((book, index) => {
       const li = document.createElement('div');
-      function capitalize(name) {
+      const capitalize = (name) => {
         return name.split('').map((each, index) => {
           if (index === 0) {
             return each.toUpperCase();
@@ -54,7 +54,7 @@ export default class BookList {
     this.form.reset();
   }
 
-  addBook(event) {
+  addBook = (event) => {
     event.preventDefault();
     const title = event.target[0].value;
     const author = event.target[1].value;
@@ -64,13 +64,13 @@ export default class BookList {
     this.displayBooks();
   }
 
-  removeBook(index) {
+  removeBook = (index) => {
     this.books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
 
-  setupEventListeners() {
+  setupEventListeners = () => {
     this.form.addEventListener('submit', this.addBook.bind(this));
     this.bookListContainer.addEventListener('click', (e) => {
       if (e.target.className === 'remove') {

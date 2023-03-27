@@ -2,7 +2,7 @@ export const bookListSection = document.querySelector('#book-list-section');
 export const navBtns = document.querySelectorAll('.nav-btn');
 const sections = document.querySelectorAll('section');
 
-export function renderPage(e) {
+export const renderPage = (e) => {
   sections.forEach((section) => {
     section.style.display = 'none';
   });
