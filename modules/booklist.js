@@ -3,15 +3,16 @@ export class BookList {
     this.form = document.querySelector('#book-form');
     this.bookListContainer = document.querySelector('#book-list');
     this.books = [];
-    this.newListBook = {};
     this.loadBooksFromLocalStorage();
     this.displayBooks();
   }
 
   book(title, author) {
-    this.newListBook.title = title;
-    this.newListBook.author = author;
-    return this.newListBook;
+    const obj = {
+      title, 
+      author,
+    }
+    return obj
   }
 
   loadBooksFromLocalStorage() {
@@ -56,7 +57,7 @@ export class BookList {
     const title = event.target[0].value;
     const author = event.target[1].value;
     const newBook = this.book(title, author);
-    this.books.push(newBook);
+    this.books = [...this.books, newBook]
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
